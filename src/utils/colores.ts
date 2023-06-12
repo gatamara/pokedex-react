@@ -19,7 +19,7 @@ export const colors = [
     { tipo: "dark", primary: "#705746", secondary: "#8f6f5a", fontColor: "#ffffff" },
 ];
 
-export const getBackgroundGradient = (type, type2) => {
+export const getBackgroundGradient = (type?: string, type2?: string) => {
     if (!type) return // sale de la funcion y no sigue ejecutando porque el parametro esta vacio, es decir, es unfeined
 
     if (type && !type2) { // si hay tipo 1 y no hay tipo 2
@@ -36,14 +36,14 @@ export const getBackgroundGradient = (type, type2) => {
 
         if (!color && !color2) return
 
-        const style = { backgroundImage: `linear-gradient(45deg, ${color.primary} 0%, ${color2.primary} 100%)` }
+        const style = { backgroundImage: `linear-gradient(45deg, ${color?.primary} 0%, ${color2?.primary} 100%)` }
         //background-color: #4158D0;background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
         return style
     }
 }
 
-export const getBackgroundBadge = (type) => {
+export const getBackgroundBadge = (type?: string) => {
     if (!type) return
     const color = colors.find(color => color.tipo === type)
     if (!color) return
@@ -51,7 +51,7 @@ export const getBackgroundBadge = (type) => {
     return style
 }
 
-export const getFontColor = (type) => {
+export const getFontColor = (type?: string) => {
     if (!type) return
     const color = colors.find(color => color.tipo === type)
 

@@ -10,7 +10,7 @@ export const MainScreen = () => {
     const { pokemonList } = usePokemonList()
 
     const handleClick = (number: number) => {
-        navigate(`/pokemon/${number}`)
+        navigate(`/pokedex-react/pokemon/${number}`)
     }
 
     return (

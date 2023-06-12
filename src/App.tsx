@@ -14,8 +14,8 @@ function App() {
         <LogoPokemon />
       </header>
       <Routes>
-        <Route path='/' element={<MainScreen />} />
-        <Route path='/pokemon/:number' element={<DetailScreen />} />
+        <Route path='/pokedex-react' element={<MainScreen />} />
+        <Route path='/pokedex-react/pokemon/:number' element={<DetailScreen />} />
       </Routes>
     </div>
   )

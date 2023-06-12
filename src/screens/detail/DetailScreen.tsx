@@ -15,7 +15,7 @@ export const DetailScreen = () => {
 
             <div className='container-details'>
                 <div className='prev-container'>
-                    <NavLink to={`/pokemon/${Number(number) - 1}`} >
+                    <NavLink to={`/pokedex-react/pokemon/${Number(number) - 1}`} >
                         <MdChevronLeft size={150} color={getFontColor(pokemon?.firstType)} />
                     </NavLink>
                 </div>
@@ -78,7 +78,7 @@ export const DetailScreen = () => {
                     </div>
                 </div >
                 <div className='next-container' style={{ color: '#4A235A' }}>
-                    <NavLink to={`/pokemon/${Number(number) + 1}`}>
+                    <NavLink to={`/pokedex-react/pokemon/${Number(number) + 1}`}>
                         <MdChevronRight size={150} color={getFontColor(pokemon?.firstType)} />
                     </NavLink>
                 </div>

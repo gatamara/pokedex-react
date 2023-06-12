@@ -37,13 +37,9 @@ export const getPokemonDescription = async (number: number) => {
     const data = await res.json()
 
     const texto = data.flavor_text_entries;
-    const descripcion = texto.find(function (element) {
+    const descripcion = texto.find(function (element: any) {
         return element.language.name === "es";
     });
 
     return descripcion.flavor_text
-}
-
-export const getPokemonTypes = (number) => {
-
 }
