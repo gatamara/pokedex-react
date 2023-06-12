@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  color: #fff;
+}
+
+.container header {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+
+.logo-pokemon {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+h3,
+h2 {
+  margin: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.3rem;
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+}
