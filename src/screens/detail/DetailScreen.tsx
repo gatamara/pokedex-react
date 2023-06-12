@@ -1,8 +1,12 @@
-import { useParams, NavLink } from 'react-router-dom'
-import { getBackgroundBadge, getBackgroundGradient, getFontColor } from '../../utils/colores'
+import { useParams } from 'react-router-dom'
+import { getBackgroundBadge, getBackgroundGradient } from '../../utils/colores'
 import './DetailScreen.css'
-import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+
 import { usePokemonDetail } from '../../hooks/usePokemonDetail'
+import { ArrowNavLeft } from '../../components/ArrowNavLeft';
+import { ArrowNavRight } from '../../components/ArrowNavRight';
+
+
 
 export const DetailScreen = () => {
 
@@ -15,9 +19,7 @@ export const DetailScreen = () => {
 
             <div className='container-details'>
                 <div className='prev-container'>
-                    <NavLink to={`/pokedex-react/pokemon/${Number(number) - 1}`} >
-                        <MdChevronLeft size={150} color={getFontColor(pokemon?.firstType)} />
-                    </NavLink>
+                    <ArrowNavLeft number={number} type={pokemon?.firstType} />
                 </div>
                 <div className='detail-pokemon'>
                     <div className='detail-imagen-title'>
@@ -26,7 +28,7 @@ export const DetailScreen = () => {
                             <h1>{pokemon?.name.toUpperCase()}</h1>
                             <h1># {number}</h1>
                         </div>
-                        <div>
+                        <div >
                             <img src={pokemon?.imageDefault} alt="imagen-pokemon-principal" />
                         </div>
                     </div>
@@ -78,11 +80,14 @@ export const DetailScreen = () => {
                     </div>
                 </div >
                 <div className='next-container' style={{ color: '#4A235A' }}>
-                    <NavLink to={`/pokedex-react/pokemon/${Number(number) + 1}`}>
-                        <MdChevronRight size={150} color={getFontColor(pokemon?.firstType)} />
-                    </NavLink>
+                    <ArrowNavRight number={number} type={pokemon?.firstType} />
                 </div>
+
             </div >
+            <div className='arrow-container'>
+                <ArrowNavLeft number={number} type={pokemon?.firstType} />
+                <ArrowNavRight number={number} type={pokemon?.firstType} />
+            </div>
         </div >
     )
 }
