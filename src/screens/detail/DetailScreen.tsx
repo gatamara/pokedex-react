@@ -28,7 +28,7 @@ export const DetailScreen = () => {
                             <h1>{pokemon?.name.toUpperCase()}</h1>
                             <h1># {number}</h1>
                         </div>
-                        <div >
+                        <div className='principal-image'>
                             <img src={pokemon?.imageDefault} alt="imagen-pokemon-principal" />
                         </div>
                     </div>

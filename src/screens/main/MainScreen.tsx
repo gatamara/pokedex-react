@@ -14,7 +14,7 @@ export const MainScreen = () => {
     }
 
     return (
-        <main className="main-container">
+        <main className="main-screen">
             {pokemonList.map(({ number, name }) => (
                 <Card key={number} name={name} number={number} onClick={() => handleClick(number)} />
             ))}
