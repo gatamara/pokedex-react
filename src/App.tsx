@@ -1,6 +1,6 @@
 
 import './App.css'
-import { LogoPokemon } from './components/LogoPokemon'
+
 import { Route, Routes } from "react-router-dom";
 import { MainScreen } from './screens/main/MainScreen';
 import { DetailScreen } from './screens/detail/DetailScreen';

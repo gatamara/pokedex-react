@@ -5,6 +5,7 @@ import './DetailScreen.css'
 import { usePokemonDetail } from '../../hooks/usePokemonDetail'
 import { ArrowNavLeft } from '../../components/ArrowNavLeft';
 import { ArrowNavRight } from '../../components/ArrowNavRight';
+import { Footer } from '../../components/Footer';
 
 
 
@@ -84,10 +85,8 @@ export const DetailScreen = () => {
                 </div>
 
             </div >
-            <div className='arrow-container'>
-                <ArrowNavLeft number={number} type={pokemon?.firstType} />
-                <ArrowNavRight number={number} type={pokemon?.firstType} />
-            </div>
+
+            <Footer number={number} type={pokemon?.firstType} />
         </div >
     )
 }
