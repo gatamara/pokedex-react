@@ -6,12 +6,14 @@ export const usePokemonDetail = (number: number) => {
 
     const [pokemon, setPokemon] = useState<PokemonDetail>()
     const [description, setDescription] = useState<string>()
+    const [isLoading, setIsLoading] = useState<boolean>(true)
 
     useEffect(() => {
 
         getPokemonDetail(number)
             .then(pokemonDetail => {
                 setPokemon(pokemonDetail)
+                setIsLoading(false)
             })
 
         getPokemonDescription(number)
@@ -22,6 +24,8 @@ export const usePokemonDetail = (number: number) => {
     }, [number])
 
 
-    return { pokemon, description }
+
+
+    return { isLoading, pokemon, description }
 
 }

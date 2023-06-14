@@ -6,6 +6,7 @@ import { usePokemonDetail } from '../../hooks/usePokemonDetail'
 import { ArrowNavLeft } from '../../components/ArrowNavLeft';
 import { ArrowNavRight } from '../../components/ArrowNavRight';
 import { Footer } from '../../components/Footer';
+import { Loading } from '../../components/Loading';
 
 
 
@@ -13,7 +14,11 @@ export const DetailScreen = () => {
 
     const { number } = useParams()
 
-    const { pokemon, description } = usePokemonDetail(Number(number))
+    const { isLoading, pokemon, description } = usePokemonDetail(Number(number))
+
+    if (isLoading) {
+        return <Loading />
+    }
 
     return (
         <div className='main-container' style={getBackgroundGradient(pokemon?.firstType, pokemon?.secondType)} >
